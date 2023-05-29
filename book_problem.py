@@ -12,9 +12,8 @@ def lenght_arr(arr: list):
     return 1 + lenght_arr(arr[1:])
 
 
-def maximum(arr: list):
-    
-    return 
+def maximum(arr: list): #пока не знаю как это написать 
+    pass
 
 
 arr = list(range(100))
