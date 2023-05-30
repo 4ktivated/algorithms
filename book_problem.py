@@ -1,3 +1,4 @@
+
 def arr_sum(arr: list):
     if arr == []:
         return 0
@@ -12,11 +13,17 @@ def lenght_arr(arr: list):
     return 1 + lenght_arr(arr[1:])
 
 
-def maximum(arr: list): #пока не знаю как это написать 
-    pass
+def maximum(arr: list):
+    head = arr[0]
+    if len(arr) == 1:
+        return arr[0]
+    tail = maximum(arr[1:])
+    if head > tail:
+        return head
+    else:
+        return tail
+    
+    
+arr = [22, 5, 1, 18, 99, 56, 234, 164, 3146, 21, 4]
 
-
-arr = list(range(100))
-print(lenght_arr(arr))
-print(arr_sum(arr))
-
+print(maximum(arr))
