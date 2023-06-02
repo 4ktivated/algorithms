@@ -1,6 +1,10 @@
-abscissas = [0.0, 1.0, 2.0]
-ordinates = [0.0, 0.0, 1.1]
-applicates = [0.0, 1.0, 1.5]
-r = 2
-dots = zip(abscissas, ordinates, applicates)
-print(all(map(lambda x: x[0]**2+x[1]**2+x[2]**2 <= r**2, dots)))
+def valid_ip(ip):
+    ip_int = [int(i) for i in ip.split('.') if i.isdigit()]
+    if len(ip.split('.')) > len(ip_int):
+        return False
+    else: 
+        return (all(map(lambda x: 0 <= int(x) <= 255, ip_int))) 
+
+
+ip = '10.1.1.a'
+print(valid_ip(ip))

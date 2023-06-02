@@ -4,7 +4,7 @@ def quicksort(nums: list):
     head = []
     midl = []
     tail = []
-    opin = nums[-1]
+    opin = nums[len(nums)//2]
     for i in nums:
         if i < opin:
             head.append(i)
