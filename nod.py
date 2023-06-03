@@ -4,7 +4,7 @@ def gcd(a, b):
             a = a % b
         else:
             b = b % a
-        return (a + b)
+    return (a + b)
 
 
 def gcd_rec(a, b): 
@@ -16,8 +16,8 @@ def gcd_rec(a, b):
 
 
 
-a = 145
-b = 25
+a = 268
+b = 30
 
 print(gcd(a, b,))
 print(gcd_rec(a, b))
