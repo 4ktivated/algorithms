@@ -15,11 +15,9 @@ def bfs(name):
     return False
 
 def person_valid(person):
-    if person[0] == 'M':
-        return True
-    else:
-        return False
-    
-#alg from book
-graf = {'Marty': ['Sam', 'Bob', 'Alex'], 'Alex': ['Patrik'], 'Bob':['Maggy', 'Sam'], 'Sam':['Tom']}
+    return person.startswith('M')
 
+graf = {'you': ['Sam', 'Bob', 'Alex'], 'Alex': ['Patrik'], 'Bob':['Maggy', 'Sam'], 'Sam':[]}
+
+print(bfs('you'))
+#now it works
