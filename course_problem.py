@@ -1,15 +1,34 @@
-import requests
 
-city = 'Омск'
+# def shit(nums):
+#     n = len(nums)
+#     left = [1 for _ in range(n)]
+#     for i in range(1, n):
+#         left[i] = left[i-1] * nums[i -1]
+#         temp = left[i]
+#     right = [1 for _ in range(n)]
+#     for i in range(n-2, -1, -1):
+#         right[i] = right[i + 1] * nums[i + 1]
+#         temp = right[i]
+#     result = []
+#     for i in range(n):
+#         result.append(right[i] * left[i])
+#     return result
 
-url = 'https://api.openweathermap.org/data/2.5/weather?q='+city+'&units=metric&lang=ru&appid=79d1ca96933b0328e1c7e3e7a26cb347'
-
-weather_data = requests.get(url).json()
-
-temperature = round(weather_data['main']['temp'])
-temperature_feels = round(weather_data['main']['feels_like'])
-
-print('Сейчас в городе', city, str(temperature), '°C')
-print('Ощущается как', str(temperature_feels), '°C')
 
 
+# nums =[1,2,3,4]
+# print(shit(nums))
+
+nums = [0,0,1]
+def moveZeroes(nums):
+    n =len(nums)-1
+    j = 0
+    for i in range(n):
+        if nums[j] == 0:
+            nums.append(nums.pop(j))
+        else:
+            j += 1
+    
+
+moveZeroes(nums)
+print(nums)
