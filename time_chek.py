@@ -5,9 +5,8 @@ def clocker(func):
         func(*args)
         print(f"[{time.time() - start_time}]{func.__name__}")
     return clock
-
 @clocker
-def main():
-    for i in range(0,1000):
-        print(i)
+def main(i):
+    print(i*i)
+i = 100
 main()   
